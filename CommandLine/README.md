@@ -13,7 +13,9 @@
 你能获取到的信息：
 
 ```
-
+user: caiyi
+hostname: archlinux
+current_dir: /home/caiyi
 ```
 
 ### 2
@@ -27,7 +29,8 @@ caiyi@LAPTOP-I80ETG8J ~> git --version
 你能获取到的信息：
 
 ```
-
+user: caiyi
+hostname: LAPTOP-I80ETG8J
 ```
 
 ### 3
@@ -37,7 +40,10 @@ caiyi@LAPTOP-I80ETG8J ~> git --version
 你能获取到的信息：
 
 ```
-
+user: yttehs
+hostname: ROG-Strix-G16
+current_dir: /home/yttehs
+time: 08:07:12 PM
 ```
 
 ### 4
@@ -47,7 +53,10 @@ caiyi@LAPTOP-I80ETG8J ~> git --version
 你能获取到的信息：
 
 ```
-
+distribute: ArchLinux
+current_dir: /home/<user_name>
+last_command_return_value: 0
+time: 20:06:43
 ```
 
 ### 5
@@ -64,7 +73,8 @@ PS C:\Users\Caiyi Hsu>
 你能获取到的信息：
 
 ```
-
+shell: Power Shell
+current_dir: C:\Users\Caiyi Hsu
 ```
 
 ### 6
@@ -77,7 +87,10 @@ $ git --version
 你能获取到的信息：
 
 ```
-
+user: Caiyi Hsu
+hostname: LAPTOP-I80ETG8J
+platform: MINGW64
+current_dir: ~
 ```
 
 ## 编写命令
@@ -130,13 +143,13 @@ $ git --version
 
 ## 填空题
 
-1. 给出一个常用的打印文件内容的命令：____
+1. 给出一个常用的打印文件内容的命令：cat
 
-2. 给出一个常用的创建空文件夹的命令：____
+2. 给出一个常用的创建空文件夹的命令：mkdir
 
-3. 如果我下载了一个 a.out 没有执行权限，你应该输入什么命令：____
+3. 如果我下载了一个 a.out 没有执行权限，你应该输入什么命令：chmod +x a.out
 
-4. 在 Shell 中输出 "Hello, world" 的命令：____
+4. 在 Shell 中输出 "Hello, world" 的命令：echo 'Hello, world'
 
 ## 简答题
 
@@ -155,7 +168,8 @@ $ git --version
 提示：利用环境变量
 
 ```
-在这里简述你的操作
+使用 bash 的情况，在 ~/.bashrc 底部加入
+export PATH=$PATH:~/riscv-gcc/bin
 ```
 
 ## 可选附加作业(自学)
@@ -164,10 +178,28 @@ $ git --version
 
 使用 1 行shell命令，在当前文件夹的 a.txt 中写入 "Hello, "
 
+```bash
+echo 'Hello, ' > a.txt
+```
+
 ### 2
 
 使用 1 行shell命令，在上一题的的 a.txt 中追加 "world!"
 
+```bash
+echo 'world!' >> a.txt
+```
+
 ### 3
 
 同过软链接的方式解决[简答题](#简答题)的内容
+
+```bash
+ln -sf ~/riscv-gcc/bin/* ~/local/bin/.
+```
+
+在 ~/.bashrc 底部加入
+
+```shell
+export PATH=$PATH:~/.local/bin
+```
