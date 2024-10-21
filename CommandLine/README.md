@@ -179,7 +179,7 @@ export PATH=$PATH:~/riscv-gcc/bin
 使用 1 行shell命令，在当前文件夹的 a.txt 中写入 "Hello, "
 
 ```bash
-echo 'Hello, ' > a.txt
+echo -n 'Hello, ' > a.txt
 ```
 
 ### 2
@@ -187,7 +187,7 @@ echo 'Hello, ' > a.txt
 使用 1 行shell命令，在上一题的的 a.txt 中追加 "world!"
 
 ```bash
-echo 'world!' >> a.txt
+echo -n 'world!' >> a.txt
 ```
 
 ### 3
