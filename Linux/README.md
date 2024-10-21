@@ -1,3 +1,3 @@
 # My Linux Setup
 
-<!-- 在这里编写你的记录 -->
+![fastfetch](fastfetch.png)
